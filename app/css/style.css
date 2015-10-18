@@ -1,0 +1,16 @@
+.row .col.card {
+	padding: 0 30px;
+	min-height: 400px;
+}
+.card .card-content {
+	padding:0 10px;
+}
+.tax {
+	margin-top: 10px;
+}
+.total {
+	font-weight: bold;
+}
+.btn {
+	margin: 5px 20px;
+}

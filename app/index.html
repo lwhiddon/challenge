@@ -1,0 +1,42 @@
+<!doctype html>
+<html ng-app="myApp">
+	<head>
+		<link rel="stylesheet" href="/bower_components/Materialize/dist/css/materialize.min.css"/>
+		<link rel="stylesheet" href="/css/style.css"/>
+		<script src="/bower_components/angular/angular.min.js"></script>
+		<script src="/bower_components/jquery/dist/jquery.min.js"></script>
+		<script src="/bower_components/Materialize/dist/js/materialize.min.js"></script>
+		<script src="js/main.js"></script>
+		<script src="data/items.js"></script>
+	</head>
+	<body>
+		<div ng-controller="OrdersController" class="container row">
+			<div class="col m6 s12">
+				<h4>Products</h4>
+				<ul>
+					<li ng-repeat="item in items">
+						<input check-list type="checkbox" ng-checked="selectedOrders.indexOf(item.id) > -1" id="{{ item.id }}" value="{{ item.id }}"/>
+						<label for="{{ item.id }}">{{ item.name }} - {{ item.price | currency }} </label>
+					</li>
+				</ul>
+				<button ng-click="buildOrder([1,2,3])" class="btn">Order 1</button>
+				<button ng-click="buildOrder([4,5])" class="btn">Order 2</button>
+				<button ng-click="buildOrder([6,7,8,9])" class="btn">Order 3</button>
+				<button ng-click="buildOrder()" class="btn">Custom</button>
+			</div>
+			<div class="col m5 s12 card">
+				<h4>Purchase receipt</h4>
+					<div class="card-content">
+						<ul ng-show="tax">
+							<li ng-repeat="item in computedItems">
+								{{ item.name }} - {{ item.price | currency }}
+							</li>
+							<li class="tax">Tax: {{ tax | currency }}</li>
+							<li class="total">Total: {{ total | currency }}</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

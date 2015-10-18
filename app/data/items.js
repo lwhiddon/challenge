@@ -1,0 +1,65 @@
+window.items = [
+    {
+        id: 1,
+        name: 'book',
+        isExempt: true,
+        isImport: false,
+        price: 12.49,
+    },
+    {
+        id: 2,
+        name: 'music CD',
+        isExempt: false,
+        isImport: false,
+        price: 14.99,
+    },
+    {
+        id: 3,
+        name: 'chocolate bar',
+        isExempt: true,
+        isImport: false,
+        price: 0.85,
+    },
+    {
+        id: 4,
+        name: 'imported box of chocolates',
+        isExempt: true,
+        isImport: true,
+        price: 10,
+    },
+    {
+        id: 5,
+        name: 'imported bottle of perfume',
+        isExempt: false,
+        isImport: true,
+        price: 47.50,
+    },
+    {
+        id: 6,
+        name: 'imported bottle of perfume',
+        isExempt: false,
+        isImport: true,
+        price: 27.99,
+    },
+    {
+        id: 7,
+        name: 'bottle of perfume',
+        isExempt: false,
+        isImport: false,
+        price: 18.99,
+    },
+    {
+        id: 8,
+        name: 'packet of headache pills',
+        isExempt: true,
+        isImport: false,
+        price: 9.75,
+    },
+    {
+        id: 9,
+        name: 'box of imported chocolates',
+        isExempt: true,
+        isImport: true,
+        price: 11.25,
+    }
+]
